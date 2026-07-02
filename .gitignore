@@ -1,0 +1,24 @@
+# Go binary
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Environment
+.env
+
+# Secrets
+firebase_service_account.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local backup / generated files
+.history/
+nul
+tmp/

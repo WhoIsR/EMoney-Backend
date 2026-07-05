@@ -1,6 +1,10 @@
 # Kashi E-Money Backend
 
-Backend API untuk aplikasi Kashi E money pada tugas UAS Aplikasi Mobile Lanjutan.
+Backend API untuk aplikasi Kashi E Money pada tugas UAS Aplikasi Mobile Lanjutan. Backend ini dipakai oleh aplikasi E-Money untuk autentikasi, saldo, transaksi, top up, transfer, OTP, TOTP, dan pembayaran dari merchant.
+
+## Repository Terkait
+
+- Aplikasi Kashi E Money: [WhoIsR/EMoney-MobileApp](https://github.com/WhoIsR/EMoney-MobileApp.git)
 
 ## Fitur
 
@@ -8,6 +12,7 @@ Backend API untuk aplikasi Kashi E money pada tugas UAS Aplikasi Mobile Lanjutan
 - Registrasi dan data user wallet.
 - Data saldo dan riwayat transaksi.
 - Top up dan transfer.
+- Payment request dari merchant.
 - OTP email, OTP Firebase, dan TOTP.
 
 ## Menjalankan Backend
@@ -17,8 +22,9 @@ go mod download
 go run .
 ```
 
-Salin `.env.example` menjadi `.env`, lalu isi konfigurasi database, Redis,
-Firebase, SMTP, dan JWT sesuai environment lokal.
+Perintah `go mod download` digunakan untuk mengambil dependency Go. Perintah `go run .` digunakan untuk menjalankan backend secara lokal.
+
+Salin `.env.example` menjadi `.env`, lalu isi konfigurasi database, Redis, Firebase, SMTP, dan JWT sesuai environment lokal.
 
 ## Endpoint Utama
 
@@ -40,5 +46,4 @@ POST /v1/otp/totp/verify
 
 ## Catatan Secret
 
-File `.env` dan `firebase_service_account.json` tidak ikut repo karena berisi
-credential lokal.
+File `.env` dan `firebase_service_account.json` tidak ikut repo karena berisi credential lokal.
